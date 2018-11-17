@@ -14,6 +14,7 @@ function userHandler(){
 		$hasUser = 
 			'<div class="formgroup">
 				<form action="logout.php" method="post">
+					<label for="User">User - ' .  $_SESSION['USERNAME'] .' </label>
 					<input class="formButton" type="submit" value="logout">
 				</form>
 			</div>';
