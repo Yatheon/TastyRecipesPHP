@@ -24,10 +24,10 @@ function accField(){
 			}
 			else{
 				echo $noUser;
-				if ($_SESSION['failedLoggin'] == true)
+				if ($_SESSION['failedLogin'] == true)
 				{
 					echo ("<p class='accFieldError'>Wrong username or password!</p>");
-					$_SESSION['failedLoggin'] = false;
+					$_SESSION['failedLogin'] = false;
 				}
 			}
 }
