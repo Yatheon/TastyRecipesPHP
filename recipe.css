@@ -56,6 +56,7 @@
 }
 
 .comment {
+	word-break: break-word;
     float: right;
     width: 100%;
 }
