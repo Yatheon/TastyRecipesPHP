@@ -68,7 +68,7 @@ footer{
 	background-color: #d21111;
 	color: white;
 	padding: 5px;
-	border: 0px;
+	border: 0;
     border-radius: 5px;
 }
 .formButton:hover{
