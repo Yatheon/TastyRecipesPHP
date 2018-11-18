@@ -1,10 +1,11 @@
 <?php
-function newCommentField($receipeID){
-	if(isset($_SESSION['loggedin']) and $_SESSION['loggedin'] == true){
-		echo (	
-		'<form action="newComment.php?' 
-		. $receipeID .
-		'" method="post">
+function newCommentField($receipeID)
+{
+    if (isset($_SESSION['loggedin']) and $_SESSION['loggedin'] == true) {
+        echo(
+            '<form action="newComment.php?'
+            . $receipeID .
+            '" method="post">
 			<div class="textbox-wrapper">
 				<textarea class="textField commentTextBox" name="comment" placeholder="Type message.."></textarea>
 			</div>
@@ -12,8 +13,7 @@ function newCommentField($receipeID){
 				 <input class="sendbutton" type="submit" value="Send"/>
 			</div>
 		</form>');
-	}
-	else{
-		echo('<p class="textbox-wrapper">Login to write comments!</P>');
-	}
+    } else {
+        echo('<p class="textbox-wrapper">Login to write comments!</P>');
+    }
 }
