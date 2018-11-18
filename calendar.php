@@ -28,7 +28,7 @@
         </div>
     </div>
     <?php
-    accField();
+    accField("calendar.php");
     ?>
 
 </div>
@@ -53,7 +53,6 @@
     <li>Sa</li>
     <li>Su</li>
 </ul>
-
 
 <div class="week">
     <div class="not-current">

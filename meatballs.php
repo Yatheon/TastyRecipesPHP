@@ -29,7 +29,7 @@
         </div>
     </div>
     <?php
-    accField();
+    accField("meatballs.php");
     ?>
 </div>
 
@@ -152,8 +152,8 @@
 </div>
 
 <?php
-comments(1);
-newCommentField(1);
+comments(1, "pancakes.php");
+newCommentField(1, "pancakes.php");
 ?>
 <footer></footer>
 </body>

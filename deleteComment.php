@@ -21,8 +21,4 @@ if (!empty($_POST['timestamp'])) {
     file_put_contents($commentFile, implode(";\n", $comments));
 }
 
-if (isset($_SERVER["HTTP_REFERER"])) {
-    header("Location: " . $_SERVER["HTTP_REFERER"]);
-} else {
-    include "index.php";
-}
+header("Location:" . $_POST['redirect']);

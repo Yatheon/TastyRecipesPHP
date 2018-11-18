@@ -1,11 +1,11 @@
 <?php
 require_once 'Comment.php';
-function comments($receipeID)
+function comments($recipeID, $thisPage)
 {
 
-    if ($receipeID == 0) {
+    if ($recipeID == 0) {
         $commentFile = "commentData/commentsPancakes.txt";
-    } else if ($receipeID == 1) {
+    } else if ($recipeID == 1) {
         $commentFile = "commentData/commentsMeatballs.txt";
     }
 
@@ -24,17 +24,16 @@ function comments($receipeID)
             $x++;
             echo('<p class="name">' . $comment->getUsername() . '</p>');
             if ($comment->getUsername() === $_SESSION['USERNAME']) {
-                echo("<form action='deleteComment.php?" . $receipeID . "' method='post'>");
+                echo("<form action='deleteComment.php?" . $recipeID . "' method='post'>");
+                echo('<input type="hidden" name="redirect" value="' . $thisPage . '"/>');
                 echo("<input type='hidden' name='timestamp' value='" .
                     $comment->getTime() . "'/>");
-                echo("<input class='delbutton 'type='submit' value='X'/>");
+                echo("<input class='delbutton' type='submit' value='X'/>");
                 echo("</form>");
             }
 
             echo('<p class="comment">' . $comment->getComment() . '</p>');
             echo('<p class="time">' . $comment->getCreated() . '</p>');
-
-
             echo('</div>');
         }
     }

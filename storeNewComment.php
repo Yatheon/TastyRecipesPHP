@@ -13,10 +13,6 @@ if (!empty($_POST['comment'])) {
     $comment = new Comment($_SESSION['USERNAME'], $_POST['comment']);
     file_put_contents($commentFile, serialize($comment) . ";\n", FILE_APPEND);
 
-    if (isset($_SERVER["HTTP_REFERER"])) {
-        header("Location: " . $_SERVER["HTTP_REFERER"]);
-    } else {
-        include "index.php";
-    }
+    header("Location:" . $_POST['redirect']);
 }	
 

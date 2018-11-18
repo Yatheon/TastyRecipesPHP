@@ -30,7 +30,7 @@
         </div>
     </div>
     <?php
-    accField();
+    accField("pancakes.php");
     ?>
 </div>
 
@@ -168,8 +168,8 @@
 </div>
 
 <?php
-comments(0);
-newCommentField(0);
+comments(0, "pancakes.php");
+newCommentField(0, "pancakes.php");
 ?>
 <footer></footer>
 </body>
