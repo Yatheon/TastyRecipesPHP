@@ -23,7 +23,7 @@ if (!empty($_POST['USERNAME']) and !empty($_POST['PASSWORD']) ){
 		}
 	}
 	
-
+	$_SESSION['failedLoggin'] = true;
 	if (isset($_SERVER["HTTP_REFERER"])) {
       header("Location: " . $_SERVER["HTTP_REFERER"]);
 	}else{

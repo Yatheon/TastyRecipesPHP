@@ -24,5 +24,10 @@ function userHandler(){
 			}
 			else{
 				echo $noUser;
+				if ($_SESSION['failedLoggin'] == true)
+				{
+					echo ("<p class='accFieldError'>Wrong username or password!</p>");
+					$_SESSION['failedLoggin'] = false;
+				}
 			}
 }
