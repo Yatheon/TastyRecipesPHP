@@ -11,7 +11,7 @@
     {
         session_start();
     }
-     include_once "frag/accField.php";
+     include_once "accField.php";
      ?>
     <title>Home</title>
 </head>
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 			<?php
-		userHandler();
+		accField();
 	?>
 	</div>
 

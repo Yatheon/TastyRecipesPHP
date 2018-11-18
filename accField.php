@@ -1,5 +1,5 @@
 <?php
-function userHandler(){
+function accField(){
 	  
 		$noUser =   
 			'<div class="formgroup">

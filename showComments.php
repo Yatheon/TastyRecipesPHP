@@ -11,19 +11,20 @@ function comments($receipeID)
 	}
 	
 	$comments = explode(";\n", file_get_contents($commentFile));
-
-	for ($i = count($comments) - 1; $i >= 0; $i--)
+	$x = 0;
+	for ($i = 0; $i <= count($comments); $i++)
 	{
 		
 		$comment = unserialize($comments[$i]);
 		if($comment instanceof Comment and !$comment->isDeleted()){
 			
-			if($i % 2 == 0){
+			if($x % 2 == 0){
 				echo ('<div class="message-container">');
 			}
 			else{
 				echo ('<div class="message-container darker">');
 			}
+			$x++;
 			echo ('<p class="name">' . $comment->getUsername() . '</p>');
 			if ($comment->getUsername() === $_SESSION['USERNAME']) {
 				echo("<form action='deleteComment.php?" . $receipeID ."' method='post'>");

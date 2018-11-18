@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<?php
 	session_start();
-    include_once "frag/accField.php";
+    include_once "accField.php";
 	include_once "showComments.php";
 	include_once "newCommentField.php";
     ?>
@@ -29,7 +29,7 @@
 			</div>
 		</div>
 		<?php
-		userHandler();
+		accField();
 	?>
 	</div>
 	

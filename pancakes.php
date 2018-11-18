@@ -9,7 +9,7 @@
 
 <?php
 	session_start();
-     include_once "frag/accField.php";
+     include_once "accField.php";
 	 include_once "showComments.php";
 	 include_once "newCommentField.php";
      ?>
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 			<?php
-		userHandler();
+		accField();
 	?>
 	</div>
 

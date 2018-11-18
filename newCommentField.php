@@ -13,4 +13,7 @@ function newCommentField($receipeID){
 			</div>
 		</form>');
 	}
+	else{
+		echo('<p class="textbox-wrapper">Login to write comments!</P>');
+	}
 }
